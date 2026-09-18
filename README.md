@@ -45,36 +45,18 @@ See [statement.md](statement.md) for the full problem statement, scope and targe
 
 ## AI/ML approach
 
-**Bayesian mastery (`src/mastery.py`)**
-Each topic keeps a Beta(alpha, beta) distribution. `mastery = alpha / (alpha + beta)`, and uncertainty
-is the standard deviation of that Beta distribution. A passing score shifts weight toward alpha, a
-failing score shifts weight toward beta, both scaled by how far the score was from the pass threshold,
-so a strong pass moves mastery more than a narrow one. A simple forgetting mechanism pulls mastery
-back toward the prior the longer a topic goes unstudied.
+The planner uses a combination of probability, machine learning and search-based planning.
 
-**ML component (`src/ml_model.py`)**
-A logistic regression classifier (scikit-learn) predicts the probability that a study session on a
-topic will succeed, using seven features: current mastery, recent average score, latest score,
-difficulty, days since last study, attempts, and exam urgency. It is trained on a bundled synthetic
-dataset generated with a fixed random seed (`data/training_data.csv`, created on first run if not
-present). The dataset is clearly synthetic and is only meant to give the model something sensible to
-learn from; it is not a claim about real student behaviour. The model is evaluated on a held out 25%
-test split, and the real metrics from that split are printed on every run (see Testing below).
+**Bayesian mastery:**
+Each topic has an estimated mastery level that is updated when the student records assessment results. The system also keeps track of uncertainty in that estimate.
 
-**Informed search planner (`src/planner.py`)**
-A beam search over 20 minute action slots. At each step, every remaining topic (each usable twice per
-day) is scored with a utility function combining:
+**Machine learning:**
+A small logistic regression model predicts how likely the student is to perform well in a study session based on their recent performance and topic information. The model is trained on a bundled synthetic dataset and runs locally using scikit-learn.
 
-- mastery gap (1 - mastery)
-- predicted learning success from the ML model
-- exam urgency (from days left before the subject's exam date)
-- topic importance
-- revision need (days since last studied)
-- a repetition penalty that discourages scheduling the same topic back to back
+**Planning agent:**
+The system uses beam search to compare possible study actions and select a daily plan that fits the student's available time while giving priority to topics that need more attention.
 
-The top `beam_width` partial plans are kept at each step until the time budget runs out, and the
-highest total utility plan is returned. The full reasoning (each factor and its value) is available
-per topic through "Explain latest decision".
+The detailed algorithms and design decisions are explained in the project report.
 
 ## Architecture
 
@@ -159,6 +141,20 @@ changed plan):
 6. `8` — see why the current plan's topics were chosen over the alternatives
 7. `10` — see the ML model's real held out test metrics
 8. `0` — save and exit (progress is also saved automatically after every action)
+
+## Screenshots
+
+### Generated study plan
+
+![Generated study plan](docs/screenshots/study-plan.png)
+
+### Assessment update
+
+![Assessment update](docs/screenshots/assessment.png)
+
+### Planner reasoning
+
+![Planner reasoning](docs/screenshots/explanation.png)
 
 ## Testing
 

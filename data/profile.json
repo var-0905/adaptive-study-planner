@@ -13,8 +13,8 @@
           "subject_id": "sub_maths",
           "difficulty": 0.7,
           "importance": 0.9,
-          "alpha": 3.0,
-          "beta": 5.0,
+          "alpha": 2.8333632434533307,
+          "beta": 4.666726486906661,
           "attempts": 2,
           "last_studied": "2026-09-02",
           "history": [
@@ -36,10 +36,10 @@
           "subject_id": "sub_maths",
           "difficulty": 0.5,
           "importance": 0.7,
-          "alpha": 6.0,
-          "beta": 2.0,
-          "attempts": 3,
-          "last_studied": "2026-09-10",
+          "alpha": 5.8789291416276,
+          "beta": 3.07578582832552,
+          "attempts": 4,
+          "last_studied": "2026-09-18",
           "history": [
             {
               "date": "2026-08-25",
@@ -55,6 +55,11 @@
               "date": "2026-09-10",
               "score": 0.8,
               "kind": "quiz"
+            },
+            {
+              "date": "2026-09-18",
+              "score": 0.4,
+              "kind": "exam"
             }
           ]
         },
@@ -83,10 +88,10 @@
           "subject_id": "sub_cs",
           "difficulty": 0.6,
           "importance": 0.85,
-          "alpha": 4.0,
-          "beta": 3.0,
-          "attempts": 2,
-          "last_studied": "2026-08-30",
+          "alpha": 3.855289738576207,
+          "beta": 3.9035264923841377,
+          "attempts": 3,
+          "last_studied": "2026-09-18",
           "history": [
             {
               "date": "2026-08-15",
@@ -97,6 +102,11 @@
               "date": "2026-08-30",
               "score": 0.65,
               "kind": "practice"
+            },
+            {
+              "date": "2026-09-18",
+              "score": 0.5,
+              "kind": "exam"
             }
           ]
         },
@@ -106,8 +116,8 @@
           "subject_id": "sub_cs",
           "difficulty": 0.75,
           "importance": 0.8,
-          "alpha": 2.0,
-          "beta": 4.0,
+          "alpha": 1.882151499327389,
+          "beta": 3.646454497982166,
           "attempts": 1,
           "last_studied": "2026-08-22",
           "history": [
@@ -124,8 +134,8 @@
           "subject_id": "sub_cs",
           "difficulty": 0.55,
           "importance": 0.75,
-          "alpha": 5.0,
-          "beta": 3.0,
+          "alpha": 4.769116882454314,
+          "beta": 2.884558441227157,
           "attempts": 2,
           "last_studied": "2026-09-08",
           "history": [
