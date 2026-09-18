@@ -1,0 +1,107 @@
+{
+  "name": "Demo Student",
+  "daily_minutes": 80,
+  "subjects": {
+    "sub_maths": {
+      "subject_id": "sub_maths",
+      "name": "Mathematics",
+      "exam_date": "2026-10-05",
+      "topics": {
+        "t_calc": {
+          "topic_id": "t_calc",
+          "name": "Calculus - Limits and Derivatives",
+          "subject_id": "sub_maths",
+          "difficulty": 0.7,
+          "importance": 0.9,
+          "alpha": 3.0,
+          "beta": 5.0,
+          "attempts": 2,
+          "last_studied": "2026-09-02",
+          "history": [
+            {"date": "2026-08-20", "score": 0.4, "kind": "quiz"},
+            {"date": "2026-09-02", "score": 0.55, "kind": "practice"}
+          ]
+        },
+        "t_prob": {
+          "topic_id": "t_prob",
+          "name": "Probability",
+          "subject_id": "sub_maths",
+          "difficulty": 0.5,
+          "importance": 0.7,
+          "alpha": 6.0,
+          "beta": 2.0,
+          "attempts": 3,
+          "last_studied": "2026-09-10",
+          "history": [
+            {"date": "2026-08-25", "score": 0.6, "kind": "quiz"},
+            {"date": "2026-09-05", "score": 0.75, "kind": "practice"},
+            {"date": "2026-09-10", "score": 0.8, "kind": "quiz"}
+          ]
+        },
+        "t_matrices": {
+          "topic_id": "t_matrices",
+          "name": "Matrices and Determinants",
+          "subject_id": "sub_maths",
+          "difficulty": 0.4,
+          "importance": 0.5,
+          "alpha": 2.0,
+          "beta": 2.0,
+          "attempts": 0,
+          "last_studied": null,
+          "history": []
+        }
+      }
+    },
+    "sub_cs": {
+      "subject_id": "sub_cs",
+      "name": "Computer Science",
+      "exam_date": "2026-09-28",
+      "topics": {
+        "t_search": {
+          "topic_id": "t_search",
+          "name": "Search Algorithms",
+          "subject_id": "sub_cs",
+          "difficulty": 0.6,
+          "importance": 0.85,
+          "alpha": 4.0,
+          "beta": 3.0,
+          "attempts": 2,
+          "last_studied": "2026-08-30",
+          "history": [
+            {"date": "2026-08-15", "score": 0.5, "kind": "quiz"},
+            {"date": "2026-08-30", "score": 0.65, "kind": "practice"}
+          ]
+        },
+        "t_bayes": {
+          "topic_id": "t_bayes",
+          "name": "Bayesian Reasoning",
+          "subject_id": "sub_cs",
+          "difficulty": 0.75,
+          "importance": 0.8,
+          "alpha": 2.0,
+          "beta": 4.0,
+          "attempts": 1,
+          "last_studied": "2026-08-22",
+          "history": [
+            {"date": "2026-08-22", "score": 0.35, "kind": "quiz"}
+          ]
+        },
+        "t_ml": {
+          "topic_id": "t_ml",
+          "name": "Supervised Learning Basics",
+          "subject_id": "sub_cs",
+          "difficulty": 0.55,
+          "importance": 0.75,
+          "alpha": 5.0,
+          "beta": 3.0,
+          "attempts": 2,
+          "last_studied": "2026-09-08",
+          "history": [
+            {"date": "2026-08-28", "score": 0.6, "kind": "practice"},
+            {"date": "2026-09-08", "score": 0.7, "kind": "quiz"}
+          ]
+        }
+      }
+    }
+  }
+}
